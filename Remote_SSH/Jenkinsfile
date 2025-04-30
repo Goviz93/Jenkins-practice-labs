@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    environment {
+        REMOTE_USER = 'remote_user'
+        REMOTE_HOST = 'remote-host'
+        SSH_KEY = '/var/jenkins_home/.ssh/id_rsa'
+    }
+
+    stages {
+        stage('Execute remote command') {
+            steps {
+                sshagent (credentials: ['remote-ssh-key']) {
+                    sh '''
+                        ssh -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_HOST "uptime"
+                    '''
+                }
+            }
+        }
+    }
+}
