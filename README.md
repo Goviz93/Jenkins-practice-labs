@@ -22,7 +22,8 @@ jenkins-practices/
 
 | ID | Title | Description |
 |----|-------|-------------|
-| 01 | [Jenkins Remote Backup to S3](./01-jenkins-remote-backup-s3/README.md) | Automates a MySQL backup using Jenkins and uploads it to AWS S3. |
+| 01 | [Remote Command Execution via SSH from Jenkins](./Remote_SSH/README.md) | Execute commands on a remote container (`remote_host`) from Jenkins (`jenkins_ssh`) using SSH within a Docker Compose network. |
+| 02 | [Jenkins Remote Backup to S3](./MySQL_AWS_Backup/README.md) | Automates a MySQL backup using Jenkins and uploads it to AWS S3. |
 
 > ⚠️ More practices will be added soon...
 
