@@ -25,6 +25,7 @@ Execute commands on a remote container (`remote_host`) from Jenkins (`jenkins_ss
 .
 ├── docker-compose.yml
 ├── Dockerfile
+├── Jenkinsfile
 └── jenkins_volume/ (persistent Jenkins data)
 ```
 
@@ -41,7 +42,7 @@ Execute commands on a remote container (`remote_host`) from Jenkins (`jenkins_ss
    - Public key added to `remote_host` under `/home/remote_user/.ssh/authorized_keys`.
 
 3. **Jenkins Configuration**:
-   - Created a freestyle project.
+   - Created a freestyle project or a new pipeline.
    - Executed SSH command to `remote_host` such as:
      ```bash
      ssh -o StrictHostKeyChecking=no remote_user@remote-host "uptime"

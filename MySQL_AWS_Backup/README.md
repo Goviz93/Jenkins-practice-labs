@@ -28,6 +28,7 @@ Automate the process of backing up a MySQL database using a Bash script, trigger
 ├── docker-compose.yml
 ├── Dockerfile
 ├── backup_process.sh
+├── Jenkinsfile
 └── jenkins_volume/ (persistent Jenkins data)
 ```
 
@@ -49,7 +50,7 @@ Automate the process of backing up a MySQL database using a Bash script, trigger
    - Exports AWS credentials.
    - Uploads the backup to a specified S3 bucket.
 
-4. **Created a Jenkins freestyle project**:
+4. **Created a Jenkins freestyle project or a new pipeline**:
    - Executes the following command via SSH:
      ```bash
      bash /tmp/backup_process.sh $MYSQL_HOST $MYSQL_PASSWORD $DATABASE_NAME $AWS_ACCESS_KEY $AWS_BUCKET_NAME
