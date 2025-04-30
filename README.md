@@ -10,7 +10,7 @@ This repository includes individual folders for each practice, each with its own
 
 ```bash
 jenkins-practices/
-├── 01-jenkins-remote-backup-s3/
+├── Remote_SSH/
 │   └── README.md
 ├── ...
 └── README.md
