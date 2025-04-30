@@ -1,0 +1,25 @@
+services:
+
+  jenkins_ssh:
+    container_name: jenkins_ssh
+    image: jenkins/jenkins
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./jenkins_volume:/var/jenkins_home
+    networks:
+      - ssh_net
+
+  remote_host:
+    container_name: remote-host
+    build:
+      context: .
+    networks:
+      - ssh_net
+
+
+networks:
+  ssh_net:
+
+
+
